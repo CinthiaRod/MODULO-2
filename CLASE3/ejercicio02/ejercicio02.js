@@ -1,6 +1,5 @@
 //Actividad 2: Seguimiento de series de televisión
 //Consigna: ¡Es hora de organizar tus series favoritas! Crea un programa que permita:
-const { log } = require('console');
 const fs = require('fs');
 const filePath = './series.json';
 
@@ -15,8 +14,10 @@ const leerSeries = () => {
         fs.writeFileSync(filePath, '[]');
     };
     const contenido = fs.readFileSync(filePath, 'utf-8');// leemos el archivo
-return JSON.parse(contenido); //Convertimos a un array de libros
+return JSON.parse(contenido); //Convertimos a un array de series
 };
+
+
 //1.Registrar una serie: Se debe registrar una serie con su nombre y la cantidad de temporadas.
 const escribirSerie = (series) => {
     fs.writeFileSync(filePath, JSON.stringify(series, null, 2)); // Escribimos las series en el archivo
@@ -33,8 +34,7 @@ const listaSeries = () => {
     const series =leerSeries();// leemos las series
     console.log("\nLista series favoritas:");
     series.forEach(serie =>{
-        console.log(`${serie.id}. ${serie.nombre} - ${serie.temporada} temporadas`);
-        
+        console.log(`${serie.id}. ${serie.nombre} - ${serie.temporada} temporadas`); 
     });
 };
 
