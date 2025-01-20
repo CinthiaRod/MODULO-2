@@ -13,7 +13,7 @@ const leerTareas = () => {
             fs.writeFileSync(filePath, '[]');
         };
         const contenido = fs.readFileSync(filePath, 'utf-8');// leemos el archivo
-    return JSON.parse(contenido); //Convertimos a un array de series
+    return JSON.parse(contenido); //Convertimos a un array de tareas
     };
 
 //1.Agregar una tarea: Registrar una tarea pendiente con su descripción.

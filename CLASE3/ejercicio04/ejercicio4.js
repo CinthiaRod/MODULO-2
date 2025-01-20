@@ -38,7 +38,7 @@ const actualizarCantidad = (idProducto, nuevaCantidad) =>{
     const productos =leerInventario();// leemos el inventario
     const producto = productos.find(P => P.id ===idProducto); //buscamos el producto por su número de id
     if (producto){
-        producto.cantidad =parseInt (nuevaCantidad); //actualizamos la temporada
+        producto.cantidad =parseInt (nuevaCantidad); //actualizamos la cantidad
         escribirInventario(productos);
         console.log(`\nLa cantidad del producto ${producto.nombre} fue actualizada, nueva cantidad disponible ${producto.cantidad}\n`);
     }else{

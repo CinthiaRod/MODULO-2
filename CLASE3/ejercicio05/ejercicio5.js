@@ -2,7 +2,7 @@
 //Consigna: Crea un programa que permita registrar contactos con nombre, teléfono y correo electrónico. El programa debe permitirte:
 const fs = require ('fs');
 
-//Usa un archivo JSON para guardar las tareas.
+//Usa un archivo JSON para guardar los contactos.
 const filePath = './Contactos.json'
 
 //Función para leer los contactos
