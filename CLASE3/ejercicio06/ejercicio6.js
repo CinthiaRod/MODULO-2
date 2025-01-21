@@ -12,7 +12,7 @@ const leerDiario = () => {
             fs.writeFileSync(filePath, '[]');
         };
         const contenido = fs.readFileSync(filePath, 'utf-8');// leemos el archivo
-    return JSON.parse(contenido); //Convertimos a un array de contactos
+    return JSON.parse(contenido); //Convertimos a un array de entradas
     };
 
 //1.Agregar una entrada al diario: Registrar una nueva entrada con la fecha y el texto.
