@@ -1,7 +1,7 @@
 //Actividad 6: Gestión de un diario personal
 //Consigna: Crea un programa que te permita gestionar un diario personal. El programa debe permitirte:
 const fs = require('fs');
-//Usa un archivo JSON para guardar la informacipon del diario
+//Usa un archivo JSON para guardar la información del diario
 const filePath = './Diario.json'
 
 //Función para leer las entradas del diario
