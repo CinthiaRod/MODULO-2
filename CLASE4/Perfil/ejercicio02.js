@@ -4,10 +4,9 @@ const fs = require('fs');
 
 //Pista: Utiliza fs.readFile con la codificación 'utf-8' para obtener el contenido del archivo como texto legible.
 // y muestra la información en la consola para asegurarte de que todo está correcto.
-
- fs.readFile('perfil.json', 'utf-8', function(err, data){
+ fs.readFile('perfil.json', 'utf-8', function(err, data){//Leemos el archivo
     if (!err){
-        console.log(data);
+        console.log(JSON.parse(data));//Imprimimos la información parseando el archivo
     }else{
         throw err
     }

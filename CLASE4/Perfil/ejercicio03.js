@@ -4,16 +4,13 @@ const fs = require ('fs');
 
 // Agrega un nuevo atributo hobby a tu perfil y guarda los cambios en el archivo perfil.json.
 //Pista: Primero, lee el archivo existente, actualiza el objeto y vuelve a escribirlo.
-// Leemos el archivo 
-fs.readFile('perfil.json', 'utf-8', (err, data) => {
+fs.readFile('perfil.json', 'utf-8', (err, data) => {// Leemos el archivo 
     if (err) {
         console.error("No se pudo leer el archivo:", err);
     } else {
-        const perfil = JSON.parse(data);   // Convertimos el contenido en un objeto
-        perfil.hobby = "Escribir";// Agregamos un nuevo atributo
-
-        // Guardamos lo actualizado 
-        fs.writeFile('perfil.json', JSON.stringify(perfil, null, 2), (err) => {
+        const perfil = JSON.parse(data);   //Parseamos el contenido en un objeto
+        perfil.hobby = "Escribir";// Agregamos un nuevo atributo        
+        fs.writeFile('perfil.json', JSON.stringify(perfil, null, 2), (err) => {// Guardamos lo actualizado 
             if (err) {
                 console.error("No se pudo actualizar tu perfil:", err);
             } else {
