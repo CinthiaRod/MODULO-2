@@ -1,6 +1,7 @@
 //Ejercicio 1: ¡Personaliza tu saludo con Node.js!
 //Consigna: En este ejercicio, crearás un programa que salude al usuario. 
 //Indicaciones:
+const { log } = require('console');
 const readline = require ('readline');
 
 //Usa el paquete dotenv para cargar las variables de entorno desde un archivo .env.
@@ -18,3 +19,12 @@ const userName = argument[0] || "invitado"
 
 //Ejecuta el programa desde la terminal y verifica los diferentes resultados al cambiar las variables de entorno y los argumentos.
 console.log(defaultGreeting, userName);
+
+//Ejercicio 2: Descubre tu entorno de trabajo
+//Requisitos del programa:
+//Debe mostrar la plataforma del sistema operativo (Linux, macOS o Windows).
+//Debe mostrar el directorio actual desde donde se ejecuta el programa.
+//Usa los métodos process.platform y process.cwd() para obtener esta información.
+console.log("Información sobre el sistema de ejecución del programa:");
+console.log("La platafora del sistema operativo es:", process.platform);//Imprimimos información sobre la plataforma
+console.log("El directorio actual es:", process.cwd())//imprimimos el directorio actual
