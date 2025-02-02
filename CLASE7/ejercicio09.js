@@ -31,7 +31,7 @@ const server = net.createServer((socket) => { //Creamos el servidor
         if (medidaArchivo <= 1048576) {
             fs.writeFile('Archivo.txt', espacioArchivo, (err) => {
                 if (err) {
-                    console.error("Erros al guardar el archivo", err);
+                    console.error("Error al guardar el archivo", err);
                 } else {
                     console.log("Se guardo el archivo correctamente");
                 };
