@@ -6,8 +6,6 @@
 
 const net = require('net'); //Importamos el modulo 'net'
 const { handleBookRequest } = require('./CONTROLLERS/BOOKCONTROLLERS');
-
-const PORT = 4000;
 const server = net.createServer((socket) => { //Creamos el servidor
     console.log('¡Un nuevo cliente se ha conectado!\n');
 
